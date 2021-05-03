@@ -1,14 +1,15 @@
 from django.shortcuts import render
 
 
-def main(request):
-    return render(request, 'mainapp/index.html')
-
-
 def products(request):
-    return render(request, 'mainapp/products.html')
-
-
-def contact(request):
-    return render(request, 'mainapp/contact.html')
-
+    context = {
+        'links': [
+            {'href': 'products:index', 'name': 'все', 'url_name': 'index'},
+            {'href': 'products:home', 'name': 'дом', 'url_name': 'home'},
+            {'href': 'products:office', 'name': 'офис', 'url_name': 'office'},
+            {'href': 'products:modern', 'name': 'модерн', 'url_name': 'modern'},
+            {'href': 'products:classic', 'name': 'классика', 'url_name': 'classic'}
+        ],
+        'title': 'товары',
+    }
+    return render(request, 'products.html', context=context)
