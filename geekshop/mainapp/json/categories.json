@@ -1,0 +1,27 @@
+[
+    {
+        "name": "все",
+        "description": "",
+        "url": "index"
+    },
+    {
+        "name": "дом",
+        "description": "",
+        "url": "home"
+    },
+    {
+        "name": "офис",
+        "description": "",
+        "url": "office"
+    },
+    {
+        "name": "модерн",
+        "description": "",
+        "url": "modern"
+    },
+    {
+        "name": "классика",
+        "description": "",
+        "url": "classic"
+    }
+]
