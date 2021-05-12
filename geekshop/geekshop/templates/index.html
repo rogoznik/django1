@@ -1,22 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block header %}
+{% block main_slider %}
     <div class="slider">
-			<div class="header clearfix">
-				<a href="{% url 'index' %}" class="logo"></a>
-				<ul class="menu">
-					<li><a href="{% url 'index' %}" class="active">домой</a></li>
-					<li><a href="{% url 'mainapp:index' %}">продукты</a></li>
-					<li><a href="{% url 'contacts' %}">контакты</a></li>
-				</ul>
-				<a href="#" class="search"></a>
-			</div>
+    {% include 'includes/inc_main_menu.html' %}
 			<div class="text-slider">
 				<h3 class="green">{{ topic }} {%  now "Y" %}</h3>
 				<h3 class="big">{{ slogan }}</h3>
 				<p>Новый уровень комфорта. Отличные характеристики.</p>
-				<a href="#" class="button-order">заказать <img src="{% static 'img/arrow.png' %}" alt=""></a>
+				<a href="#" class="button-order">заказать <img src="/static/img/arrow.png" alt=""></a>
 			</div>	
 			<div class="navi">
 				<a href="#"></a><a href="#"></a><a href="#"></a>
@@ -29,7 +21,7 @@
         <div class="featured-menu">
             <a class="active" href="#">Популярные</a><a href="#">Новинки</a>
         </div>
-        <a class="explore" href="#">показать все <img src="{% static 'img/arrow.png' %}" alt=""></a>
+        <a class="explore" href="#">показать все <img src="/static/img/arrow.png" alt=""></a>
         <div class="clearfix">
         </div>
         <div class="tab-content">
