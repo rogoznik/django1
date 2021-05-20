@@ -4,7 +4,7 @@ from basketapp.models import Basket
 
 
 def main(request):
-    products = Product.objects.all()
+    products = Product.objects.all()[:2]
 
     basket = ''
     if request.user.is_authenticated:

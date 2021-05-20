@@ -24,14 +24,18 @@
                   <a href="{% url 'auth:login' %}">войти</a>
                 {% endif %}
             </li>
+        {% if basket %}
+            <li>
+                <a href="{% url 'basket:list' %}" class="fa fa-shopping-basket">
+                    <span class="basket_all_q">
+                        {{ basket.0.total_cost|floatformat:0 }} руб
+                        ({{ basket.0.total_quantity }} шт.)
+                    </span>
+                </a>
+            </li>
+        {% endif %}
     </ul>
-    {% if basket %}
-        <a href="{% url 'basket:list' %}" class="fa fa-shopping-basket">
-            <span>
-                {% if basket %} {{ basket|length }} {% endif %}
-            </span>
-        </a>
-    {% endif %}
+    
     <a href="#" class="search"></a>
 
 </div>
