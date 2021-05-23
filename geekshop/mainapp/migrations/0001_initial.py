@@ -18,7 +18,6 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=64, unique=True, verbose_name='имя')),
                 ('description', models.TextField(blank=True, verbose_name='описание')),
-                ('url', models.CharField(blank=True, max_length=20, verbose_name='ссылка')),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('updated', models.DateTimeField(auto_now=True)),
             ],
