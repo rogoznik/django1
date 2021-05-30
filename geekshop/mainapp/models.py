@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class ProductCategory(models.Model):
     name = models.CharField(max_length=64, unique=True, verbose_name='имя')
@@ -10,17 +9,16 @@ class ProductCategory(models.Model):
         blank=True
     )
 
-    url = models.CharField(
-        max_length=20,
-        blank=True,
-        verbose_name='ссылка'
-    )
-
     created = models.DateTimeField(
         auto_now_add=True
     )
     updated = models.DateTimeField(
         auto_now=True
+    )
+
+    is_active = models.BooleanField(
+        verbose_name='активна',
+        default=True
     )
 
     def __str__(self):
@@ -65,6 +63,11 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(
         verbose_name='количество на складе',
         default=0
+    )
+
+    is_active = models.BooleanField(
+        verbose_name='активен',
+        default=True
     )
 
     def __str__(self):

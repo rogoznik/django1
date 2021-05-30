@@ -2,21 +2,21 @@
     {
         "name": "дом",
         "description": "",
-        "url": "home"
+        "is_active": true
     },
     {
         "name": "офис",
         "description": "",
-        "url": "office"
+        "is_active": true
     },
     {
         "name": "модерн",
         "description": "",
-        "url": "modern"
+        "is_active": true
     },
     {
         "name": "классика",
         "description": "",
-        "url": "classic"
+        "is_active": true
     }
 ]
